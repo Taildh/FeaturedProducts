@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="dtn_products_list" class="Dtn\FeaturedProducts\Block\Product\ProductsList">
+        <label translate="true">Featured Products</label>
+        <description>Featured Products </description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="false" visible="true">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="products_count" xsi:type="text" required="true" visible="true">
+                <label translate="true">Number of Products to Display</label>
+                <value>10</value>
+            </parameter>
+            <parameter name="sort_order" xsi:type="select" required="true" visible="true">
+                <label translate="true">Options</label>
+                <options>
+                    <option name="entity_id" value="entity_id" selected="true">
+                        <label>Filter by id</label>
+                    </option>
+                    <option name="name" value="name">
+                        <label>Filter by name</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="type_sort" xsi:type="select" required="true" visible="true">
+                <label translate="true">Sort order by</label>
+                <options>
+                    <option name="ASC" value="ASC">
+                        <label>Ascending</label>
+                    </option>
+                    <option name="DESC" value="DESC" selected="true">
+                        <label>Descending</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="display_product" xsi:type="select" required="false" visible="true">
+                <label translate="true">Display product</label>
+                <options>
+                    <option name="all" value="all" selected="true">
+                        <label>All</label>
+                    </option>
+                    <option name="special_price" value="special_price">
+                        <label>Special price</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
